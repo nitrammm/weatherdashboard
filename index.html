@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="app-title">Weather Dashboard</h1>
+    </header>
+    
+    <main>
+                <div class="card">
+                    <h2 class="card-header text-uppercase">Search By City</h2>
+                    <form class="card-body" id="city-form">
+                        <label class="form-label" for="cityname">City Name</label>
+                        <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input"/>
+                        <button type="submit" class="btn">Get Weather</button>
+                    </form>
+                </div>
+            
+
+                <div class="card hidden" id="current-weather-card">
+                    <h2 class="card-header" id="weather-status"></h2>
+                    <div class="card-body" id="current-weather"></div>
+                </div>
+    
+
+            <div id="search">
+                <div class="card" id="history" style="display:none;">
+                    <h3 class="card-header text-uppercase">Search History<i id="trash" class="fas fa-trash" title="Clear History"></i></h3>
+
+                    <div class="card-body" id="history-buttons"></div>
+                </div>
+            </div>
+
+                <div class="card hidden" id="five-card-day">
+                    <h3 class="card-header" id="five-day-head">5-Day Forecast</h3>
+                        <div class="card-body" id="five-day-body"></div>
+                </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
+
